@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/drawable/ic_icon_menu_pokedex_all.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/drawable/ic_icon_menu_pokedex_favorites.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/drawable/ic_pokeball_icon_icons_com_67533.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/drawable/ic_pokedex_bag.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/drawable/ic_pokemon_121114.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/drawable/ic_pokemon_moltres_icon_icons_com_67518.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/layout/fragment_dashboard.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/layout/fragment_home.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/layout/fragment_notifications.xml" value="0.16530797101449277" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Complete-Android-11-Jetpack-Masterclass/Pokedex_Kotlin/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/drawable/customborder.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_favorites.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

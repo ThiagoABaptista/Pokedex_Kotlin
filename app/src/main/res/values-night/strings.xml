@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_all">Todos Pokemons</string>
+    <string name="title_favorite">Favoritos Pokemons</string>
+    <string name="label_no_favorite_pokemons_added_yet">Nenhum Pokemon favoritado</string>
+</resources>
