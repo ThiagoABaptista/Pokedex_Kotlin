@@ -15,5 +15,5 @@
  core testing
  
  # Authorship
-Thiago Aschebrock Baptista
-GitHub: https://github.com/ThiagoABaptista
+ Thiago Aschebrock Baptista
+ GitHub: https://github.com/ThiagoABaptista
