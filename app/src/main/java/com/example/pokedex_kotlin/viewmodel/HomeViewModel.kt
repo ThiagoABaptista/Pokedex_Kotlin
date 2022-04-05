@@ -1,4 +1,4 @@
-package com.example.pokedex_kotlin.ui.home
+package com.example.pokedex_kotlin.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

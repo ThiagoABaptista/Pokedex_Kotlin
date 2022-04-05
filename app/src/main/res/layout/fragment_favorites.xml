@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.FragmentFavorites">
+    tools:context=".view.fragmensts.FragmentFavorites">
 
     <TextView
         android:id="@+id/tv_no_favorite_pokemons_added_yet"

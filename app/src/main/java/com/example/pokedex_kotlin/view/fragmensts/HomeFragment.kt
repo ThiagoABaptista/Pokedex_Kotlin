@@ -1,15 +1,13 @@
-package com.example.pokedex_kotlin.ui.home
+package com.example.pokedex_kotlin.view.fragmensts
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.pokedex_kotlin.R
 import com.example.pokedex_kotlin.databinding.FragmentHomeBinding
+import com.example.pokedex_kotlin.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
 

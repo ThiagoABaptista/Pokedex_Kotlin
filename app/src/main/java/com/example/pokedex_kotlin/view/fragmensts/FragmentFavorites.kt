@@ -1,4 +1,4 @@
-package com.example.pokedex_kotlin.ui.dashboard
+package com.example.pokedex_kotlin.view.fragmensts
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.pokedex_kotlin.R
 import com.example.pokedex_kotlin.databinding.FragmentFavoritesBinding
+import com.example.pokedex_kotlin.viewmodel.FavoritesViewModel
 
 class FragmentFavorites : Fragment() {
 
