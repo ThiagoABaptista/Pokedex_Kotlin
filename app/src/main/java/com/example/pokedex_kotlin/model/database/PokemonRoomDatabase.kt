@@ -5,8 +5,10 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.example.pokedex_kotlin.model.entities.Pokemon
 import androidx.room.Room
+import androidx.room.TypeConverters
 
 @Database(entities = [Pokemon::class], version = 1)
+@TypeConverters(Converters::class)
 abstract class PokemonRoomDatabase : RoomDatabase(){
     companion object{
         @Volatile

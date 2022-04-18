@@ -10,8 +10,8 @@ data class Pokemon(
     @ColumnInfo val name :String,
     @ColumnInfo(name = "type_of_pokemon") val typeOfPokemon: ArrayList<String>,
     @ColumnInfo val weaknesses : ArrayList<String>,
+    @ColumnInfo val evolutions: ArrayList<String>,
     @ColumnInfo val category :String,
-    @ColumnInfo val evolutions: List<String>,
     @ColumnInfo(name = "x_description") val xDescription:String,
     @ColumnInfo(name = "image_source") val imageSource: String,
     @ColumnInfo(name = "catched_pokemon") val catchedPokemon: Boolean = false
