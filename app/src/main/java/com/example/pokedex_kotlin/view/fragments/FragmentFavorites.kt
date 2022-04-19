@@ -1,4 +1,4 @@
-package com.example.pokedex_kotlin.view.fragmensts
+package com.example.pokedex_kotlin.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
