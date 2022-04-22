@@ -1,6 +1,7 @@
 package com.example.pokedex_kotlin.view.activities
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -8,11 +9,18 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.pokedex_kotlin.R
+import com.example.pokedex_kotlin.application.PokemonApplication
 import com.example.pokedex_kotlin.databinding.ActivityMainBinding
+import com.example.pokedex_kotlin.viewmodel.PokemonViewModel
+import com.example.pokedex_kotlin.viewmodel.PokemonViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val mPokemonViewModel : PokemonViewModel by viewModels{
+        PokemonViewModelFactory((application as PokemonApplication).repository)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -13,8 +13,12 @@ interface PokemonDao {
     suspend fun insertPokemonDetails(pokemon: Pokemon)
 
     @Query("SELECT * FROM POKEMONS_TABLE ORDER BY ID")
-    fun getAllPokemonList(): Flow<Pokemon>
+    fun getAllPokemonsList(): Flow<Pokemon>
 
     @Query("SELECT * FROM POKEMONS_TABLE WHERE catched_pokemon = 1")
-    fun getCatchedPokemonList() : Flow<List<Pokemon>>
+    fun getCatchedPokemonsList() : Flow<List<Pokemon>>
+
+    @Query("SELECT * FROM POKEMONS_TABLE WHERE CHARINDEX(:filterType,type_of_pokemon) > 0")
+    fun getFilteredPokemonsList(filterType : String) : Flow<List<Pokemon>>
+
 }
