@@ -14,7 +14,9 @@ class PokemonViewModel(private val repository:PokemonRepository) : ViewModel(){
         repository.insertPokemonData(pokemon)
     }
 
+    /*
     fun getFilteredList(value : String) : LiveData<List<Pokemon>> =
         repository.filteredListPokemons(value).asLiveData()
-
+    */
+    val allPokemonsList: LiveData<List<Pokemon>> = repository.allPokemonsList.asLiveData()
 }
