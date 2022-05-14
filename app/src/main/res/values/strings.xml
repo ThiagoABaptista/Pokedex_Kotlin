@@ -3,4 +3,5 @@
     <string name="title_all">Todos Pokemons</string>
     <string name="title_favorite">Favoritos Pokemons</string>
     <string name="label_no_favorite_pokemons_added_yet">Nenhum Pokemon favoritado</string>
+    <string name="label_no_pokemons">No Pokemons</string>
 </resources>

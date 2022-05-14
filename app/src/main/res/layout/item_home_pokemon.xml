@@ -15,6 +15,7 @@
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_item_indice"
         android:clickable="true"
         android:focusable="true"
         android:background="?android:attr/selectableItemBackground"
