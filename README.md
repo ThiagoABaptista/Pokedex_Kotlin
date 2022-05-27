@@ -10,9 +10,9 @@
  
  To build it, i will use MVVM and retrofit to consult pokemons a raw JSON.
  
- ![Sem título](https://user-images.githubusercontent.com/23534550/170768371-bd759275-bec4-499f-bf7d-e9a18363176b.png)
+ ![Screenshot_1653675641](https://user-images.githubusercontent.com/23534550/170768855-9801f559-dafc-48e9-b759-aaba2a0b930b.png)
 
- 
+
 # IDE
  Android Studio
  
