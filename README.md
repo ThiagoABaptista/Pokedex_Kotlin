@@ -10,7 +10,8 @@
  
  To build it, i will use MVVM and retrofit to consult pokemons a raw JSON.
  
- ![Screenshot_1653675641](https://user-images.githubusercontent.com/23534550/170768855-9801f559-dafc-48e9-b759-aaba2a0b930b.png)
+ ![Screenshot_1653675641](https://user-images.githubusercontent.com/23534550/170769501-933e4e2d-100e-4a5a-8a20-044f8443d68d.png)
+
 
 
 # IDE
