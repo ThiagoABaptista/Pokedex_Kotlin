@@ -9,6 +9,8 @@
  Also, the user can favorite a pokemon and then view a list of all their favorite pokemon's.
  
  To build it, i will use MVVM and retrofit to consult pokemons a raw JSON.
+ ![Sem título](https://user-images.githubusercontent.com/23534550/170768371-bd759275-bec4-499f-bf7d-e9a18363176b.png)
+
  
 # IDE
  Android Studio
