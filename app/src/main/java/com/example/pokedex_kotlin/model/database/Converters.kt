@@ -1,8 +1,6 @@
 package com.example.pokedex_kotlin.model.database
 
 import androidx.room.TypeConverter
-import androidx.room.TypeConverters
-import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.google.gson.Gson
 
 
