@@ -55,12 +55,12 @@ class AllFragment : Fragment() {
         mBinding.rvPokemonListAll.adapter = mPokemonAdapter
     }
     private fun registerObservers(){
-        mPokemonViewModel.pokemons.observe(this, Observer { pokemons ->
+        mPokemonViewModel.pokemons.observe(viewLifecycleOwner, Observer { pokemons ->
             mPokemonAdapter.addPokemons(pokemons ?: return@Observer)
             showPokemons(true)
         })
 
-        mPokemonViewModel.pokemonsNotFound.observe(this, Observer { didntFind->
+        mPokemonViewModel.pokemonsNotFound.observe(viewLifecycleOwner, Observer { didntFind->
             if(mBinding.rvPokemonListAll.isVisible && didntFind){
                 showPokemons(false)
             }

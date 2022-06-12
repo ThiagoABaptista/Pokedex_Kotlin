@@ -42,11 +42,11 @@ class PokemonAdapter(
             .into(holder.imagePokemon)
 
         holder.cardPokemon.setCardBackgroundColor(ContextCompat.getColor(
-            fragment.context!!,
+            fragment.requireContext(),
             colorTypeByID[pokemon.typeofpokemon[0]] ?: 0))
-        holder.namePokemon.setTextColor(ContextCompat.getColor(fragment.context!!,
+        holder.namePokemon.setTextColor(ContextCompat.getColor(fragment.requireContext(),
             R.color.white))
-        holder.idPokemon.setTextColor(ContextCompat.getColor(fragment.context!!,
+        holder.idPokemon.setTextColor(ContextCompat.getColor(fragment.requireContext(),
             R.color.white))
         /*
         itemView.constraint_item_indice.setOnClickListener {
