@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Pokedex_Kotlin</string>
-    <string name="title_all">All Pokemons</string>
-    <string name="title_favorite">Catched Pokemons</string>
+    <string name="title_all_pokemons">All Pokemons</string>
+    <string name="title_pokemons_favorite">Catched Pokemons</string>
     <string name="label_no_favorite_pokemons_added_yet">Nenhum Pokemon favoritado</string>
+    <string name="image_contentDescription">image</string>
+    <string name="lbl_weakness">Weakness</string>
+    <string name="lbl_evolutions">Evolutions</string>
+    <string name="title_pokemon_details">Pokemons Details</string>
 </resources>

@@ -3,7 +3,7 @@ package com.example.pokedex_kotlin.model.database
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.pokedex_kotlin.model.Pokemon
+import com.example.pokedex_kotlin.model.entities.Pokemon
 import kotlinx.coroutines.flow.Flow
 
 @Dao

@@ -9,8 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pokedex_kotlin.R
 import com.example.pokedex_kotlin.databinding.ItemHomePokemonBinding
-import com.example.pokedex_kotlin.model.Pokemon
+import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.utils.colorTypeByID
+import com.example.pokedex_kotlin.view.fragments.AllPokemonsFragment
 
 class PokemonAdapter(
     private val fragment : Fragment
@@ -33,21 +34,22 @@ class PokemonAdapter(
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
 
         val pokemon = pokemons[position]
-
-
         holder.namePokemon.text = pokemon.name
         holder.idPokemon.text = "${pokemon.id} "
         Glide.with(fragment)
             .load(pokemon.imageurl)
             .into(holder.imagePokemon)
 
-        holder.cardPokemon.setCardBackgroundColor(ContextCompat.getColor(
-            fragment.requireContext(),
-            colorTypeByID[pokemon.typeofpokemon[0]] ?: 0))
+        holder.cardPokemon.setCardBackgroundColor(setPokemonBackgoundColor(pokemon))
         holder.namePokemon.setTextColor(ContextCompat.getColor(fragment.requireContext(),
             R.color.white))
         holder.idPokemon.setTextColor(ContextCompat.getColor(fragment.requireContext(),
             R.color.white))
+        holder.itemView.setOnClickListener {
+            if(fragment is AllPokemonsFragment){
+                fragment.pokemonDetails(pokemon)
+            }
+        }
         /*
         itemView.constraint_item_indice.setOnClickListener {
             println(pokemon.gifUrl)
@@ -55,18 +57,16 @@ class PokemonAdapter(
         }
         */
     }
+    fun setPokemonBackgoundColor(pokemon: Pokemon): Int {
+        return ContextCompat.getColor(
+            fragment.requireContext(),
+            colorTypeByID[pokemon.typeofpokemon[0]] ?: 0)
+    }
 
     fun addPokemons(newPokemons: List<Pokemon>) {
         pokemons = newPokemons
         notifyDataSetChanged()
     }
-    /*
-    private fun launchDetailScreen( pokemon : Pokemon){
-        val intent = Intent(itemView.context, PokemonDetailActivity::class.java)
-        intent.putExtra(EXTRA_POKEMON,pokemon)
-        itemView.context.startActivity(intent)
-    }
-    */
 }
 
 class PokemonViewHolder (view: ItemHomePokemonBinding)

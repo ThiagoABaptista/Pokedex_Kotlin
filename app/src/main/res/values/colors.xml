@@ -33,4 +33,5 @@
     <color name="fairy_type">#FF008C</color>
     <color name="shadow_type">#2B2024</color>
     <color name="unknown_type">#FFFFFF</color>
+    <color name="pokemon_image_background">#E1E1E1</color>
 </resources>

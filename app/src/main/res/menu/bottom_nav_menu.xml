@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_pokemons_all"
         android:icon="@drawable/ic_icon_pokeball"
-        android:title="@string/title_all"
+        android:title="@string/title_all_pokemons"
         />
 
     <item
-        android:id="@+id/navigation_favorites"
+        android:id="@+id/navigation_pokemons_favorites"
         android:icon="@drawable/ic_icon_pokedex_bag"
-        android:title="@string/title_favorite" />
+        android:title="@string/title_pokemons_favorite" />
 
 </menu>

@@ -3,18 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_pokemons_all">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.pokedex_kotlin.view.fragments.AllFragment"
-        android:label="@string/title_all"
-        tools:layout="@layout/fragment_all" />
+        android:id="@+id/navigation_pokemons_all"
+        android:name="com.example.pokedex_kotlin.view.fragments.AllPokemonsFragment"
+        android:label="@string/title_all_pokemons"
+        tools:layout="@layout/fragment_all" >
+        <action
+            android:id="@+id/action_navigation_pokemons_all_to_navigation_pokemon_details"
+            app:destination="@id/navigation_pokemon_details" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_favorites"
-        android:name="com.example.pokedex_kotlin.view.fragments.FragmentFavorites"
-        android:label="@string/title_favorite"
-        tools:layout="@layout/fragment_favorites" />
-
+        android:id="@+id/navigation_pokemons_favorites"
+        android:name="com.example.pokedex_kotlin.view.fragments.FavoritesFragment"
+        android:label="@string/title_pokemons_favorite"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_navigation_pokemons_favorites_to_navigation_pokemon_details"
+            app:destination="@id/navigation_pokemon_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_pokemon_details"
+        android:name="com.example.pokedex_kotlin.view.fragments.PokemonDetailsFragment"
+        android:label="@string/title_pokemon_details"
+        tools:layout="@layout/fragment_pokemon_details">
+        <argument
+            android:name="pokemonsDetails"
+            app:argType="com.example.pokedex_kotlin.model.entities.Pokemon" />
+    </fragment>
 </navigation>

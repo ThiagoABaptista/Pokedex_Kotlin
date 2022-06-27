@@ -1,6 +1,6 @@
 package com.example.pokedex_kotlin.network
 
-import com.example.pokedex_kotlin.model.Pokemon
+import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedexagoravai.util.LiveDataResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
