@@ -10,6 +10,9 @@ import androidx.room.TypeConverters
 @Database(entities = [Pokemon::class], version = 1)
 @TypeConverters(Converters::class)
 abstract class PokemonRoomDatabase : RoomDatabase(){
+
+    abstract fun pokemonDao(): PokemonDao
+
     companion object{
         @Volatile
         private var INSTANCE: PokemonRoomDatabase? = null
