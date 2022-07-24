@@ -16,53 +16,57 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_item_indice"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?android:attr/selectableItemBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
         >
+
         <ImageView
             android:id="@+id/iv_indice_pokemon"
             android:layout_width="100dp"
-            android:layout_height="match_parent"
-            tools:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            tools:background="@android:color/darker_gray"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_name_pokemon"
             app:layout_constraintStart_toStartOf="parent"
-            />
-        <TextView
-            android:id="@+id/tv_name_pokemon"
-            android:layout_marginEnd="0dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="26sp"
-            android:textAlignment="center"
-            android:fontFamily="@font/pokemon_solid"
-            tools:text="Nome do Pokemon"
-            app:layout_constraintStart_toEndOf="@id/iv_indice_pokemon"
-            app:layout_constraintTop_toTopOf="@id/iv_indice_pokemon"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@android:color/darker_gray"
             />
 
         <TextView
             android:id="@+id/tv_id_pokemon"
             android:layout_width="0dp"
-            android:textAlignment="textEnd"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/pokemon_hollow"
             android:layout_marginEnd="32dp"
+            android:fontFamily="@font/pokemon_hollow"
+            android:textAlignment="textEnd"
             android:textSize="30sp"
-            tools:text="#001 "
-            app:layout_constraintStart_toEndOf="@id/iv_indice_pokemon"
-            app:layout_constraintTop_toBottomOf="@id/tv_name_pokemon"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/iv_indice_pokemon"
-            />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/iv_indice_pokemon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_pokemon"
+            app:layout_constraintVertical_bias="0.6"
+            tools:text="#001 " />
+
+        <TextView
+            android:id="@+id/tv_name_pokemon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pokemon_solid"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_id_pokemon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_indice_pokemon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nome do Pokemon" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

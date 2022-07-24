@@ -1,4 +1,4 @@
-package com.example.pokedex_kotlin.utils
+package com.example.pokedexagoravai.util
 
 enum class Status {
     SUCCESS, LOADING, ERROR

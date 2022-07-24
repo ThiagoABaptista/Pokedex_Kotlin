@@ -18,10 +18,12 @@
         <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/drawable/customborder.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_all.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_all.xml" value="0.16077898550724637" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_details_pokemons.xml" value="0.12083333333333333" />
         <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_favorites.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/item_home_pokemon.xml" value="0.264" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/fragment_pokemon_details.xml" value="0.1" />
+        <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/layout/item_home_pokemon.xml" value="0.176" />
         <entry key="..\:/Users/Thiago/Documents/GitHub/Pokedex_Kotlin/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
       </map>
     </option>

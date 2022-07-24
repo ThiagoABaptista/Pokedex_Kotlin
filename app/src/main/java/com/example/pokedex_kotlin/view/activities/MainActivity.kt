@@ -1,7 +1,7 @@
 package com.example.pokedex_kotlin.view.activities
 
 import android.os.Bundle
-import androidx.activity.viewModels
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,18 +9,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.pokedex_kotlin.R
-import com.example.pokedex_kotlin.application.PokemonApplication
 import com.example.pokedex_kotlin.databinding.ActivityMainBinding
-import com.example.pokedex_kotlin.viewmodel.PokemonViewModel
-import com.example.pokedex_kotlin.viewmodel.PokemonViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
-//    private val mPokemonViewModel : PokemonViewModel by viewModels{
-//        PokemonViewModelFactory((application as PokemonApplication).repository)
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,11 +27,22 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home,
-                R.id.navigation_favorites
+                R.id.navigation_pokemons_all,
+                R.id.navigation_pokemons_favorites
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+    fun hideBottomNavigationView() {
+        binding.navView.clearAnimation()
+        binding.navView.animate().translationY(binding.navView.height.toFloat()).duration = 300
+        binding.navView.visibility = View.GONE
+    }
+
+    fun showBottomNavigationView() {
+        binding.navView.clearAnimation()
+        binding.navView.animate().translationY(0f).duration = 300
+        binding.navView.visibility = View.VISIBLE
     }
 }

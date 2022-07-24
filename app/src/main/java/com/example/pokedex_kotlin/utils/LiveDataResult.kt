@@ -1,4 +1,4 @@
-package com.example.pokedex_kotlin.utils
+package com.example.pokedexagoravai.util
 
 class LiveDataResult<T>(val status: Status, val data: T? = null, val error: Throwable? = null, val code: Int? = null) {
     companion object {

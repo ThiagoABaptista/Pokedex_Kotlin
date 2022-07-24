@@ -12,6 +12,7 @@
     <color name="white">#FFFFFF</color>
     <color name="background">#FF715B</color>
     <color name="yellow">#FFFF00</color>
+
     <color name="fire_type">#B30000</color>
     <color name="water_type">#370091</color>
     <color name="plant_type">#6ED135</color>
@@ -32,4 +33,5 @@
     <color name="fairy_type">#FF008C</color>
     <color name="shadow_type">#2B2024</color>
     <color name="unknown_type">#FFFFFF</color>
+    <color name="pokemon_image_background">#E1E1E1</color>
 </resources>
