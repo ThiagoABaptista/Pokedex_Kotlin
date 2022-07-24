@@ -1,5 +1,6 @@
 package com.example.pokedex_kotlin.view.adapters
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import com.example.pokedex_kotlin.databinding.ItemHomePokemonBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.utils.colorTypeByID
 import com.example.pokedex_kotlin.view.fragments.AllPokemonsFragment
+import java.lang.IndexOutOfBoundsException
 
 class PokemonAdapter(
     private val fragment : Fragment
@@ -41,10 +43,9 @@ class PokemonAdapter(
             .into(holder.imagePokemon)
 
         holder.cardPokemon.setCardBackgroundColor(setPokemonBackgoundColor(pokemon))
-        holder.namePokemon.setTextColor(ContextCompat.getColor(fragment.requireContext(),
-            R.color.white))
-        holder.idPokemon.setTextColor(ContextCompat.getColor(fragment.requireContext(),
-            R.color.white))
+        holder.namePokemon.setTextColor(setPokemonTextColor(pokemon))
+        holder.idPokemon.setTextColor(setPokemonTextColor(pokemon))
+
         holder.itemView.setOnClickListener {
             if(fragment is AllPokemonsFragment){
                 fragment.pokemonDetails(pokemon)
@@ -61,6 +62,20 @@ class PokemonAdapter(
         return ContextCompat.getColor(
             fragment.requireContext(),
             colorTypeByID[pokemon.typeofpokemon[0]] ?: 0)
+    }
+    fun setPokemonTextColor(pokemon: Pokemon): Int {
+        try {
+            return ContextCompat.getColor(
+                fragment.requireContext(),
+                colorTypeByID[pokemon.typeofpokemon[1]]!!)
+        }catch (e : IndexOutOfBoundsException){
+            if(pokemon.typeofpokemon.contains("Ice")){
+                return ContextCompat.getColor(fragment.requireContext(),R.color.colorPrimary);
+            }
+            return ContextCompat.getColor(
+                fragment.requireContext(),
+                R.color.white)
+        }
     }
 
     fun addPokemons(newPokemons: List<Pokemon>) {

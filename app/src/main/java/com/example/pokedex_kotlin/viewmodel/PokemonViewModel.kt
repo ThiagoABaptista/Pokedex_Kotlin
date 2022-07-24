@@ -12,11 +12,14 @@ class PokemonViewModel(var repository: PokemonRepository) : ViewModel() {
     private val _pokemons = MutableLiveData<List<Pokemon>>()
     val pokemons: LiveData<List<Pokemon>>
         get() = _pokemons
-
+    val selected = MutableLiveData<Pokemon>()
     private val _pokemonsNotFound = MutableLiveData<Boolean>()
     val pokemonsNotFound: LiveData<Boolean>
         get() = _pokemonsNotFound
 
+    fun select(pokemon: Pokemon) {
+        selected.value = pokemon
+    }
     fun getPokemons() {
         viewModelScope.launchSafe {
             repository.getPokemons { result ->

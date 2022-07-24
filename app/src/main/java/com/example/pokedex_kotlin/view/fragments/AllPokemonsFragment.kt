@@ -1,27 +1,21 @@
 package com.example.pokedex_kotlin.view.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokedex_kotlin.databinding.FragmentAllBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
-import com.example.pokedex_kotlin.model.entities.PokemonRoomModel
 import com.example.pokedex_kotlin.network.PokemonRepository
 import com.example.pokedex_kotlin.view.activities.MainActivity
 import com.example.pokedex_kotlin.view.adapters.PokemonAdapter
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModel
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModelFactory
 import com.example.pokedexagoravai.extension.setVisible
-import java.lang.Integer.parseInt
 
 class AllPokemonsFragment : Fragment() {
 
@@ -29,7 +23,7 @@ class AllPokemonsFragment : Fragment() {
 
     private lateinit var mPokemonAdapter: PokemonAdapter
 
-    private val mPokemonViewModel: PokemonViewModel by viewModels {
+    private val mPokemonViewModel: PokemonViewModel by activityViewModels(){
         PokemonViewModelFactory(this, PokemonRepository())
     }
 
@@ -85,8 +79,9 @@ class AllPokemonsFragment : Fragment() {
         if (requireActivity() is MainActivity) {
             (activity as MainActivity?)!!.hideBottomNavigationView()
         }
+        mPokemonViewModel.select(pokemon)
         findNavController()
-            .navigate(AllPokemonsFragmentDirections.actionNavigationPokemonsAllToNavigationPokemonDetails(pokemon))
+            .navigate(AllPokemonsFragmentDirections.actionNavigationPokemonsAllToNavigationPokemonDetails())
     }
 
     private fun showPokemons(show:Boolean) {
