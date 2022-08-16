@@ -13,6 +13,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
@@ -22,7 +24,10 @@ import com.example.pokedex_kotlin.R
 import com.example.pokedex_kotlin.databinding.FragmentPokemonDetailsBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.network.PokemonRepository
+import com.example.pokedex_kotlin.utils.SetPokemonColors
+import com.example.pokedex_kotlin.utils.buildAdapter
 import com.example.pokedex_kotlin.utils.colorTypeByID
+import com.example.pokedex_kotlin.view.adapters.PokemonTypesAdapter
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModel
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModelFactory
 import java.io.IOException
@@ -57,8 +62,11 @@ class PokemonDetailsFragment : Fragment() {
             pokemon ->
             try {
                 this.mPokemonDetails = pokemon
+                Log.i("teste",pokemon.evolutions.toString());
+                Log.i("teste",pokemon.weaknesses.toString());
+                //Glide.with(this).load(pokemon.imageurl).into(mBinding!!.ivPokemonImage)
                 Glide.with(requireActivity())
-                    .load(pokemon.imageurl)
+                    .load(pokemon.gifUrl)
                     .centerCrop()
                     .listener(object: RequestListener<Drawable> {
                         override fun onLoadFailed(
@@ -78,29 +86,26 @@ class PokemonDetailsFragment : Fragment() {
                             isFirstResource: Boolean
                         ): Boolean {
                             resource.let {
-                                var color : Int
-                                try {
-                                    color = ContextCompat.getColor(
-                                        requireContext(),
-                                        colorTypeByID[pokemon.typeofpokemon[1]]!!)
-                                }catch (e : IndexOutOfBoundsException){
-                                    if(pokemon.typeofpokemon.contains("Ice")){
-                                        color = ContextCompat.getColor(requireContext(),R.color.colorPrimary);
-                                    }else{
-                                        color = ContextCompat.getColor(
-                                            requireContext(),
-                                            R.color.white)
-                                    }
-                                }
+                                var color = SetPokemonColors(this@PokemonDetailsFragment)
+                                    .setPokemonTextColor(pokemon)
+                                color = ContextCompat.getColor(requireContext(),R.color.white);
                                 mBinding!!.tvPokemonName.setTextColor(color)
                                 mBinding!!.tvPokemonCategory.setTextColor(color)
-                                mBinding!!.tvPokemonTypeofpokemon.setTextColor(color)
                                 mBinding!!.tvPokemonXDescription.setTextColor(color)
                                 mBinding!!.tvPokemonEvolutionsLabel.setTextColor(color)
+                                mBinding!!.tvPokemonTypeofpokemon.setTextColor(color)
                                 mBinding!!.tvPokemonWeaknessesLabel.setTextColor(color)
-                                mBinding!!.rlDishDetailMain.setBackgroundColor( ContextCompat.getColor(
-                                    requireContext(),
-                                    colorTypeByID[this@PokemonDetailsFragment.mPokemonDetails!!.typeofpokemon[0]] ?: 0))
+                                /*
+                                mBinding!!.rlDishDetailMain.setBackgroundColor(
+                                    SetPokemonColors(this@PokemonDetailsFragment)
+                                        .setPokemonBackgoundColor(pokemon))
+                                */
+                                buildAdapter(
+                                    mBinding!!.rcPokemonTypeofpokemon,
+                                    PokemonTypesAdapter(this@PokemonDetailsFragment,pokemon),
+                                    null,
+                                    LinearLayoutManager(context)
+                                )
                             }
                             return false
                         }
@@ -110,10 +115,15 @@ class PokemonDetailsFragment : Fragment() {
             }catch (e : IOException){
                 e.printStackTrace()
             }
+
             mBinding!!.tvPokemonName.text =pokemon.name
-            mBinding!!.tvPokemonTypeofpokemon.text = pokemon.typeofpokemon.toString()
             mBinding!!.tvPokemonCategory.text =pokemon.category
             mBinding!!.tvPokemonXDescription.text = pokemon.xdescription
         })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mBinding = null
     }
 }

@@ -22,7 +22,7 @@ data class Pokemon(
     @ColumnInfo(name = "x_description") val xdescription:String,
     @ColumnInfo val imageurl: String,
     @ColumnInfo(name = "catched_pokemon") val catchedPokemon: Boolean = false
-) : Parcelable/*{
+) : Parcelable{
     val cleanIdEvolution get():List<String> {
         return evolutions.map { id -> id.replace("#","") }
     }
@@ -35,4 +35,4 @@ data class Pokemon(
 
         return "https://play.pokemonshowdown.com/sprites/xyani/$cleanName.gif"
     }
-}*/
+}

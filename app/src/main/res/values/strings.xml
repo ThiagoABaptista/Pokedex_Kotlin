@@ -7,4 +7,6 @@
     <string name="lbl_weakness">Weakness</string>
     <string name="lbl_evolutions">Evolutions</string>
     <string name="title_pokemon_details">Pokemons Details</string>
+    <string name="label_weaknesses">Weaknesses</string>
+    <string name="lbl_type">Types</string>
 </resources>

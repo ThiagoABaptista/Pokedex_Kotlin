@@ -4,4 +4,6 @@
     <string name="title_pokemons_favorite">Favoritos Pokemons</string>
     <string name="label_no_favorite_pokemons_added_yet">Nenhum Pokemon favoritado</string>
     <string name="lbl_weakness">Weakness</string>
+    <string name="label_weaknesses">Weaknesses</string>
+    <string name="lbl_type">Types</string>
 </resources>
