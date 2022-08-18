@@ -34,4 +34,5 @@
     <color name="shadow_type">#2B2024</color>
     <color name="unknown_type">#FFFFFF</color>
     <color name="pokemon_image_background">#E1E1E1</color>
+    <color name="card_background_red">#AF0A0A</color>
 </resources>

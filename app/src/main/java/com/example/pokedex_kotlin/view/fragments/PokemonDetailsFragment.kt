@@ -27,7 +27,9 @@ import com.example.pokedex_kotlin.network.PokemonRepository
 import com.example.pokedex_kotlin.utils.SetPokemonColors
 import com.example.pokedex_kotlin.utils.buildAdapter
 import com.example.pokedex_kotlin.utils.colorTypeByID
+import com.example.pokedex_kotlin.view.adapters.PokemonEvolutionsAdapter
 import com.example.pokedex_kotlin.view.adapters.PokemonTypesAdapter
+import com.example.pokedex_kotlin.view.adapters.PokemonWeaknessAdapter
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModel
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModelFactory
 import java.io.IOException
@@ -62,8 +64,6 @@ class PokemonDetailsFragment : Fragment() {
             pokemon ->
             try {
                 this.mPokemonDetails = pokemon
-                Log.i("teste",pokemon.evolutions.toString());
-                Log.i("teste",pokemon.weaknesses.toString());
                 //Glide.with(this).load(pokemon.imageurl).into(mBinding!!.ivPokemonImage)
                 Glide.with(requireActivity())
                     .load(pokemon.gifUrl)
@@ -86,25 +86,42 @@ class PokemonDetailsFragment : Fragment() {
                             isFirstResource: Boolean
                         ): Boolean {
                             resource.let {
+                                /*
                                 var color = SetPokemonColors(this@PokemonDetailsFragment)
                                     .setPokemonTextColor(pokemon)
-                                color = ContextCompat.getColor(requireContext(),R.color.white);
+                                mBinding!!.cvCardDescription.setCardBackgroundColor(color)
+                                mBinding!!.tvDetailsDescription.setBackgroundColor(SetPokemonColors(this@PokemonDetailsFragment)
+                                    .setPokemonBackgoundColor(pokemon))
+                                mBinding!!.tvLabelXDescription.setTextColor(color)
                                 mBinding!!.tvPokemonName.setTextColor(color)
                                 mBinding!!.tvPokemonCategory.setTextColor(color)
-                                mBinding!!.tvPokemonXDescription.setTextColor(color)
+                                mBinding!!.tvLabelPokemonCategory.setTextColor(color)
                                 mBinding!!.tvPokemonEvolutionsLabel.setTextColor(color)
                                 mBinding!!.tvPokemonTypeofpokemon.setTextColor(color)
                                 mBinding!!.tvPokemonWeaknessesLabel.setTextColor(color)
+                                */
                                 /*
                                 mBinding!!.rlDishDetailMain.setBackgroundColor(
                                     SetPokemonColors(this@PokemonDetailsFragment)
                                         .setPokemonBackgoundColor(pokemon))
                                 */
                                 buildAdapter(
-                                    mBinding!!.rcPokemonTypeofpokemon,
+                                    mBinding!!.rvPokemonTypeofpokemon,
                                     PokemonTypesAdapter(this@PokemonDetailsFragment,pokemon),
                                     null,
                                     LinearLayoutManager(context)
+                                )
+                                buildAdapter(
+                                    mBinding!!.rvDetailsWeaknesses,
+                                    PokemonWeaknessAdapter(this@PokemonDetailsFragment,pokemon),
+                                    null,
+                                    LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
+                                )
+                                buildAdapter(
+                                    mBinding!!.rvDetailsEvolutions,
+                                    PokemonEvolutionsAdapter(this@PokemonDetailsFragment,pokemon),
+                                    null,
+                                    LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
                                 )
                             }
                             return false
@@ -115,10 +132,9 @@ class PokemonDetailsFragment : Fragment() {
             }catch (e : IOException){
                 e.printStackTrace()
             }
-
+            mBinding!!.tvDetailsDescription.text = pokemon.xdescription
             mBinding!!.tvPokemonName.text =pokemon.name
-            mBinding!!.tvPokemonCategory.text =pokemon.category
-            mBinding!!.tvPokemonXDescription.text = pokemon.xdescription
+            mBinding!!.tvPokemonCategory.text = pokemon.category
         })
     }
 

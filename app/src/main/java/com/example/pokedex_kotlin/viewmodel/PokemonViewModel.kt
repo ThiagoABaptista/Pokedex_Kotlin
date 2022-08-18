@@ -22,7 +22,8 @@ class PokemonViewModel(var repository: PokemonRepository) : ViewModel() {
     }
     fun getPokemons() {
         viewModelScope.launchSafe {
-            repository.getPokemons { result ->
+            repository.getPokemons {
+                    result ->
                 when (result.status) {
                     Status.SUCCESS -> _pokemons.postValue(result.data!!)
                     else -> _pokemonsNotFound.postValue(true)
