@@ -8,11 +8,14 @@
     android:fillViewport="true"
     android:scrollbars="none"
     android:background="@color/colorPrimary"
+
     tools:context=".view.fragments.PokemonDetailsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        style="@style/pokemon_list"
+        >
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_pokemon_image"
             android:layout_width="200dp"
@@ -45,7 +48,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     tools:background="@color/pokemon_image_background"
                     android:contentDescription="@string/image_contentDescription"
-                    android:scaleType="fitXY" />
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <TextView

@@ -86,6 +86,10 @@ class PokemonDetailsFragment : Fragment() {
                             isFirstResource: Boolean
                         ): Boolean {
                             resource.let {
+                                mBinding!!.tvPokemonName.setTextColor(SetPokemonColors(this@PokemonDetailsFragment)
+                                    .setPokemonBackgoundColor(pokemon))
+                                mBinding!!.tvPokemonCategory.setTextColor(SetPokemonColors(this@PokemonDetailsFragment)
+                                    .setPokemonTextColor(pokemon))
                                 /*
                                 var color = SetPokemonColors(this@PokemonDetailsFragment)
                                     .setPokemonTextColor(pokemon)
@@ -93,7 +97,7 @@ class PokemonDetailsFragment : Fragment() {
                                 mBinding!!.tvDetailsDescription.setBackgroundColor(SetPokemonColors(this@PokemonDetailsFragment)
                                     .setPokemonBackgoundColor(pokemon))
                                 mBinding!!.tvLabelXDescription.setTextColor(color)
-                                mBinding!!.tvPokemonName.setTextColor(color)
+
                                 mBinding!!.tvPokemonCategory.setTextColor(color)
                                 mBinding!!.tvLabelPokemonCategory.setTextColor(color)
                                 mBinding!!.tvPokemonEvolutionsLabel.setTextColor(color)

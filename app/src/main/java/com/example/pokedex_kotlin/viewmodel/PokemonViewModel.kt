@@ -31,19 +31,15 @@ class PokemonViewModel(var repository: PokemonRepository) : ViewModel() {
             }
         }
     }
-/*
-    fun getSpecificPokemon(pokemonNameOrId: String = "") {
-        _pokemons.value = pokemons.value?.filter { pokemon ->
+
+    fun getPokemonByNameOrId(pokemonNameOrId: String) : List<Pokemon>?
+        = pokemons.value?.filter { pokemon ->
             pokemon.name.uppercase(Locale.ROOT)
                 .contains(pokemonNameOrId.uppercase(Locale.ROOT)) || pokemon.id.contains(
                 pokemonNameOrId
             )
         }
-        if (_pokemons.value.isNullOrEmpty()) {
-            _pokemonsNotFound.value = true
-        }
-        if (pokemonNameOrId.isBlank()) getPokemons()
-    }*/
+
 }
 
 

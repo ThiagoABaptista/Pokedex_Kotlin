@@ -7,7 +7,36 @@
     tools:context=".view.fragments.AllPokemonsFragment"
     android:layout_gravity="center_horizontal"
     >
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_main_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/et_main_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:background="@null"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="@string/search_pokemon"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:enabled="true"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_pokemon_list_all"
         android:layout_width="0dp"
@@ -17,5 +46,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/til_main_search" />
 </androidx.constraintlayout.widget.ConstraintLayout>
