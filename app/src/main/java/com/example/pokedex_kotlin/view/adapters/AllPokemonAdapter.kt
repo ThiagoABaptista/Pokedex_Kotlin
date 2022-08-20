@@ -1,20 +1,15 @@
 package com.example.pokedex_kotlin.view.adapters
 
-import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.pokedex_kotlin.R
 import com.example.pokedex_kotlin.databinding.ItemHomePokemonBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.utils.SetPokemonColors
-import com.example.pokedex_kotlin.utils.colorTypeByID
 import com.example.pokedex_kotlin.view.fragments.AllPokemonsFragment
-import java.lang.IndexOutOfBoundsException
 
 class PokemonAdapter(
     private val fragment : Fragment
@@ -48,11 +43,17 @@ class PokemonAdapter(
         holder.namePokemon.setTextColor(setPokemonsColors.setPokemonTextColor(pokemon))
         holder.idPokemon.setTextColor(setPokemonsColors.setPokemonTextColor(pokemon))
 
+        holder.constraintLayout.setOnClickListener {
+            if(fragment is AllPokemonsFragment){
+                fragment.pokemonDetails(pokemon)
+            }
+        }
         holder.itemView.setOnClickListener {
             if(fragment is AllPokemonsFragment){
                 fragment.pokemonDetails(pokemon)
             }
         }
+
         /*
         itemView.constraint_item_indice.setOnClickListener {
             println(pokemon.gifUrl)
@@ -74,4 +75,5 @@ class PokemonViewHolder (view: ItemHomePokemonBinding)
     val imagePokemon = view.ivIndicePokemon
     val idPokemon = view.tvIdPokemon
     val cardPokemon = view.cardItemIndicePokemon
+    val constraintLayout = view.constraintItemIndice
 }

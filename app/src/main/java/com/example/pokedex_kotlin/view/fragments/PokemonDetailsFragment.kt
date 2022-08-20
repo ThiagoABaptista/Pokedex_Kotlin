@@ -86,13 +86,24 @@ class PokemonDetailsFragment : Fragment() {
                             isFirstResource: Boolean
                         ): Boolean {
                             resource.let {
-                                mBinding!!.tvPokemonName.setTextColor(SetPokemonColors(this@PokemonDetailsFragment)
-                                    .setPokemonBackgoundColor(pokemon))
-                                mBinding!!.tvPokemonCategory.setTextColor(SetPokemonColors(this@PokemonDetailsFragment)
-                                    .setPokemonTextColor(pokemon))
-                                /*
                                 var color = SetPokemonColors(this@PokemonDetailsFragment)
                                     .setPokemonTextColor(pokemon)
+                                mBinding!!.tvPokemonName.setTextColor(SetPokemonColors(
+                                    this@PokemonDetailsFragment)
+                                    .setPokemonBackgoundColor(pokemon))
+                                mBinding!!.tvPokemonCategory.setTextColor(
+                                    color)
+                                mBinding!!.tvPokemonName.setShadowLayer(
+                                    2F, 0F, 0F,
+                                    color
+                                )
+                                mBinding!!.cvCardDescription.setCardBackgroundColor(color)
+                                mBinding!!.tvDetailsDescription.setTextColor(
+                                    color)
+                                mBinding!!.tvDetailsDescription.setBackgroundColor(
+                                    SetPokemonColors(this@PokemonDetailsFragment)
+                                        .setPokemonBackgoundColor(pokemon))
+                                /*
                                 mBinding!!.cvCardDescription.setCardBackgroundColor(color)
                                 mBinding!!.tvDetailsDescription.setBackgroundColor(SetPokemonColors(this@PokemonDetailsFragment)
                                     .setPokemonBackgoundColor(pokemon))
@@ -109,24 +120,6 @@ class PokemonDetailsFragment : Fragment() {
                                     SetPokemonColors(this@PokemonDetailsFragment)
                                         .setPokemonBackgoundColor(pokemon))
                                 */
-                                buildAdapter(
-                                    mBinding!!.rvPokemonTypeofpokemon,
-                                    PokemonTypesAdapter(this@PokemonDetailsFragment,pokemon),
-                                    null,
-                                    LinearLayoutManager(context)
-                                )
-                                buildAdapter(
-                                    mBinding!!.rvDetailsWeaknesses,
-                                    PokemonWeaknessAdapter(this@PokemonDetailsFragment,pokemon),
-                                    null,
-                                    LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-                                )
-                                buildAdapter(
-                                    mBinding!!.rvDetailsEvolutions,
-                                    PokemonEvolutionsAdapter(this@PokemonDetailsFragment,pokemon),
-                                    null,
-                                    LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-                                )
                             }
                             return false
                         }
@@ -136,12 +129,32 @@ class PokemonDetailsFragment : Fragment() {
             }catch (e : IOException){
                 e.printStackTrace()
             }
+            setAdapters(pokemon)
             mBinding!!.tvDetailsDescription.text = pokemon.xdescription
             mBinding!!.tvPokemonName.text =pokemon.name
             mBinding!!.tvPokemonCategory.text = pokemon.category
         })
     }
-
+    private fun setAdapters(pokemon: Pokemon){
+        buildAdapter(
+            mBinding!!.rvPokemonTypeofpokemon,
+            PokemonTypesAdapter(this@PokemonDetailsFragment,pokemon),
+            null,
+            LinearLayoutManager(context)
+        )
+        buildAdapter(
+            mBinding!!.rvDetailsWeaknesses,
+            PokemonWeaknessAdapter(this@PokemonDetailsFragment,pokemon),
+            null,
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
+        )
+        buildAdapter(
+            mBinding!!.rvDetailsEvolutions,
+            PokemonEvolutionsAdapter(this@PokemonDetailsFragment,pokemon),
+            null,
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
+        )
+    }
     override fun onDestroy() {
         super.onDestroy()
         mBinding = null

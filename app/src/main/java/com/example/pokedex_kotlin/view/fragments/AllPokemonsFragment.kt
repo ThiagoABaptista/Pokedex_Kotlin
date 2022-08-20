@@ -93,7 +93,6 @@ class AllPokemonsFragment : Fragment() {
     }
     override fun onResume() {
         super.onResume()
-
         if (requireActivity() is MainActivity) {
             (activity as MainActivity?)!!.showBottomNavigationView()
         }
