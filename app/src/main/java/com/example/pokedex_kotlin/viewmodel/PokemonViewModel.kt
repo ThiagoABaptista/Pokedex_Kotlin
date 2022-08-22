@@ -5,6 +5,7 @@ import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.network.PokemonRepository
 import com.example.pokedexagoravai.extension.launchSafe
 import com.example.pokedexagoravai.util.Status
+import kotlinx.coroutines.launch
 import java.util.*
 
 class PokemonViewModel(var repository: PokemonRepository) : ViewModel() {
@@ -39,7 +40,9 @@ class PokemonViewModel(var repository: PokemonRepository) : ViewModel() {
                 pokemonNameOrId
             )
         }
-
+    fun delete(pokemon: Pokemon) = viewModelScope.launch {
+        repository
+    }
 }
 
 

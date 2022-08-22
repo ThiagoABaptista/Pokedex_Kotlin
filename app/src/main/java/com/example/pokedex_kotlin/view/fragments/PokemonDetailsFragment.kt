@@ -6,21 +6,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.example.pokedex_kotlin.R
+import com.example.pokedex_kotlin.application.PokemonApplication
 import com.example.pokedex_kotlin.databinding.FragmentPokemonDetailsBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.network.PokemonRepository
@@ -41,7 +37,7 @@ class PokemonDetailsFragment : Fragment() {
     private var mPokemonDetails :Pokemon? = null
 
     private val mPokemonViewModel: PokemonViewModel by activityViewModels() {
-        PokemonViewModelFactory(this, PokemonRepository())
+        PokemonViewModelFactory(this, (requireActivity().application as PokemonApplication).repository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

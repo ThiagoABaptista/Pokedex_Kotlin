@@ -3105,3 +3105,94 @@ BUILD SUCCESSFUL in 19s
 2022-08-19T22:59:34.216-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
 2022-08-19T22:59:34.216-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
 2022-08-19T22:59:34.216-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2022-08-19T22:59:44.214-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2022-08-19T22:59:44.214-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2022-08-19T22:59:44.215-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2022-08-19T22:59:44.216-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2022-08-19T22:59:44.216-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2022-08-19T22:59:44.216-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2022-08-19T22:59:44.217-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2022-08-19T22:59:44.217-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2022-08-19T22:59:44.217-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2022-08-19T22:59:48.577-0300 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:63933 to /127.0.0.1:62410.
+2022-08-19T22:59:48.598-0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 114: received class org.gradle.launcher.daemon.protocol.StopWhenIdle
+2022-08-19T22:59:48.598-0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 114: Received non-IO message from client: StopWhenIdle[id=f5395764-3e34-463b-acf5-b1bc74a36af0]
+2022-08-19T22:59:48.598-0300 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: StopWhenIdle[id=f5395764-3e34-463b-acf5-b1bc74a36af0].
+2022-08-19T22:59:48.599-0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: StopWhenIdle[id=f5395764-3e34-463b-acf5-b1bc74a36af0] with connection: socket connection from /127.0.0.1:62410 to /127.0.0.1:63933.
+2022-08-19T22:59:48.599-0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: stop command received
+2022-08-19T22:59:48.601-0300 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1660960788600
+2022-08-19T22:59:48.602-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2022-08-19T22:59:48.603-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2022-08-19T22:59:48.605-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2022-08-19T22:59:48.605-0300 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stop command received
+2022-08-19T22:59:48.605-0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to stop command received. The daemon is running a build: false
+2022-08-19T22:59:48.605-0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 113: dispatching Success[value=null]
+2022-08-19T22:59:48.606-0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: StopWhenIdle[id=f5395764-3e34-463b-acf5-b1bc74a36af0]
+2022-08-19T22:59:48.606-0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 114: received class org.gradle.launcher.daemon.protocol.Finished
+2022-08-19T22:59:48.606-0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 114: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@1e7b5409
+2022-08-19T22:59:48.606-0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@1e7b5409
+2022-08-19T22:59:48.606-0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 113: stopping connection
+2022-08-19T22:59:48.606-0300 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2022-08-19T22:59:48.606-0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 114: received null
+2022-08-19T22:59:48.607-0300 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 114: Received end-of-input from client.
+2022-08-19T22:59:48.607-0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2022-08-19T22:59:48.607-0300 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2022-08-19T22:59:48.607-0300 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2022-08-19T22:59:48.608-0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 113: stopping connection
+2022-08-19T22:59:48.609-0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [79231958-97e4-4111-ab31-9719aecfaae0 port:62410, addresses:[localhost/127.0.0.1]]
+2022-08-19T22:59:48.609-0300 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [79231958-97e4-4111-ab31-9719aecfaae0 port:62410, addresses:[localhost/127.0.0.1]]
+2022-08-19T22:59:48.610-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2022-08-19T22:59:48.611-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2022-08-19T22:59:48.614-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2022-08-19T22:59:48.614-0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2022-08-19T22:59:48.619-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for jars (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\jars-8)
+2022-08-19T22:59:48.619-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on jars (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\jars-8).
+2022-08-19T22:59:48.621-0300 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] jars (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\jars-8) has last been fully cleaned up 23 hours ago
+2022-08-19T22:59:48.651-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file content cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\fileContent)
+2022-08-19T22:59:48.651-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file content cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\fileContent).
+2022-08-19T22:59:48.655-0300 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry] Finished listening to file system change events
+2022-08-19T22:59:48.655-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for Artifact transforms cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\transforms-3)
+2022-08-19T22:59:48.655-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Artifact transforms cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\transforms-3).
+2022-08-19T22:59:48.656-0300 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] Artifact transforms cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\transforms-3) has last been fully cleaned up 46 hours ago
+2022-08-19T22:59:48.657-0300 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] Artifact transforms cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\transforms-3) removing files not accessed on or after Fri Aug 12 22:11:55 BRT 2022.
+2022-08-19T22:59:48.670-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Acquiring file lock for journal cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1)
+2022-08-19T22:59:48.672-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on journal cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1).
+2022-08-19T22:59:48.673-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] The file lock is held by a different Gradle process (pid: 15788, lockId: 6994665629370894872). Pinged owner at port 52592
+2022-08-19T22:59:48.673-0300 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Gradle process at port 52592 confirmed unlock request for lock with id 6994665629370894872.
+2022-08-19T22:59:48.674-0300 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Gradle process at port 52592 confirmed unlock request for lock with id 6994665629370894872.
+2022-08-19T22:59:48.675-0300 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Gradle process at port 52592 confirmed lock release for lock with id 6994665629370894872.
+2022-08-19T22:59:48.676-0300 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Triggering lock release signal for lock with id 6994665629370894872.
+2022-08-19T22:59:48.676-0300 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Gradle process at port 52592 confirmed lock release for lock with id 6994665629370894872.
+2022-08-19T22:59:48.676-0300 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Triggering lock release signal for lock with id 6994665629370894872.
+2022-08-19T22:59:48.676-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on journal cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1).
+2022-08-19T22:59:48.676-0300 [INFO] [org.gradle.cache.internal.InMemoryDecoratedCache] Invalidating in-memory cache of C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1\file-access.bin
+2022-08-19T22:59:48.681-0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache file-access.bin (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1\file-access.bin)
+2022-08-19T22:59:48.922-0300 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] Artifact transforms cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\transforms-3) cleanup deleted 0 files/directories.
+2022-08-19T22:59:48.923-0300 [INFO] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] Artifact transforms cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\transforms-3) cleaned up in 0.266 secs.
+2022-08-19T22:59:48.924-0300 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) has last been fully cleaned up 46 hours ago
+2022-08-19T22:59:48.940-0300 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) cleanup deleted 0 files/directories.
+2022-08-19T22:59:48.942-0300 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) [subdir: C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2\resources-2.1] cleanup deleted 0 files/directories.
+2022-08-19T22:59:48.942-0300 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) [subdir: C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2\resources-2.1] removing files not accessed on or after Wed Jul 20 22:11:56 BRT 2022.
+2022-08-19T22:59:48.943-0300 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) [subdir: C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2\resources-2.1] cleanup deleted 0 files/directories.
+2022-08-19T22:59:48.945-0300 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) [subdir: C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2\files-2.1] cleanup deleted 0 files/directories.
+2022-08-19T22:59:48.945-0300 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) [subdir: C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2\files-2.1] removing files not accessed on or after Wed Jul 20 22:11:56 BRT 2022.
+2022-08-19T22:59:49.212-0300 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) [subdir: C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2\files-2.1] cleanup deleted 0 files/directories.
+2022-08-19T22:59:49.215-0300 [DEBUG] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) [subdir: C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2\metadata-2.97] cleanup deleted 0 files/directories.
+2022-08-19T22:59:49.216-0300 [INFO] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] artifact cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\modules-2) cleaned up in 0.291 secs.
+2022-08-19T22:59:49.216-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for journal cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1)
+2022-08-19T22:59:49.216-0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache file-access.bin (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1\file-access.bin)
+2022-08-19T22:59:49.217-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on journal cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1).
+2022-08-19T22:59:49.217-0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache journal cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\journal-1) was closed 2 times.
+2022-08-19T22:59:49.217-0300 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Generated Gradle JARs cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\generated-gradle-jars) was closed 0 times.
+2022-08-19T22:59:49.218-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\fileHashes)
+2022-08-19T22:59:49.218-0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\fileHashes\fileHashes.bin)
+2022-08-19T22:59:49.218-0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resourceHashesCache.bin (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\fileHashes\resourceHashesCache.bin)
+2022-08-19T22:59:49.218-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\fileHashes).
+2022-08-19T22:59:49.219-0300 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for execution history cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\executionHistory)
+2022-08-19T22:59:49.220-0300 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache executionHistory.bin (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\executionHistory\executionHistory.bin)
+2022-08-19T22:59:49.220-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on execution history cache (C:\Users\Thiago\Documents\GitHub\Pokedex_Kotlin\caches\7.0.2\executionHistory).
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2022-08-19T22:59:49.222-0300 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [79231958-97e4-4111-ab31-9719aecfaae0 port:62410, addresses:[localhost/127.0.0.1]]
+2022-08-19T22:59:49.223-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2022-08-19T22:59:49.223-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2022-08-19T22:59:49.225-0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
