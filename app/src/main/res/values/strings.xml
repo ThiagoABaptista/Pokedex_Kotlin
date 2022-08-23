@@ -2,9 +2,17 @@
     <string name="app_name">Pokedex_Kotlin</string>
     <string name="title_all_pokemons">All Pokemons</string>
     <string name="title_pokemons_favorite">Catched Pokemons</string>
-    <string name="label_no_favorite_pokemons_added_yet">Nenhum Pokemon favoritado</string>
+    <string name="label_no_favorite_pokemons_added_yet">No favorite pokemons added yet</string>
     <string name="image_contentDescription">image</string>
     <string name="lbl_weakness">Weakness</string>
     <string name="lbl_evolutions">Evolutions</string>
     <string name="title_pokemon_details">Pokemons Details</string>
+    <string name="label_weaknesses">Weaknesses</string>
+    <string name="lbl_type">Types</string>
+    <string name="item_title_description">Description</string>
+    <string name="ipsum_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="lbl_details_category">Category</string>
+    <string name="label_xDescription">Pokemon Description</string>
+    <string name="pokemon_icon_description">Pokemon Icon</string>
+    <string name="search_pokemon">Search Pokemon</string>
 </resources>

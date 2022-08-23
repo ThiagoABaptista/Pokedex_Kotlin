@@ -1,27 +1,24 @@
 package com.example.pokedex_kotlin.view.fragments
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokedex_kotlin.databinding.FragmentAllBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
-import com.example.pokedex_kotlin.model.entities.PokemonRoomModel
 import com.example.pokedex_kotlin.network.PokemonRepository
 import com.example.pokedex_kotlin.view.activities.MainActivity
 import com.example.pokedex_kotlin.view.adapters.PokemonAdapter
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModel
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModelFactory
 import com.example.pokedexagoravai.extension.setVisible
-import java.lang.Integer.parseInt
 
 class AllPokemonsFragment : Fragment() {
 
@@ -29,7 +26,7 @@ class AllPokemonsFragment : Fragment() {
 
     private lateinit var mPokemonAdapter: PokemonAdapter
 
-    private val mPokemonViewModel: PokemonViewModel by viewModels {
+    private val mPokemonViewModel: PokemonViewModel by activityViewModels(){
         PokemonViewModelFactory(this, PokemonRepository())
     }
 
@@ -45,11 +42,12 @@ class AllPokemonsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mBinding.etMainSearch.setText("")
         mPokemonAdapter = PokemonAdapter(this@AllPokemonsFragment)
         registerObservers()
         configAdapter()
         mPokemonViewModel.getPokemons()
-        //searchPokemon()
+        setSearchPokemon()
     }
 
     private fun configAdapter(){
@@ -85,8 +83,9 @@ class AllPokemonsFragment : Fragment() {
         if (requireActivity() is MainActivity) {
             (activity as MainActivity?)!!.hideBottomNavigationView()
         }
+        mPokemonViewModel.select(pokemon)
         findNavController()
-            .navigate(AllPokemonsFragmentDirections.actionNavigationPokemonsAllToNavigationPokemonDetails(pokemon))
+            .navigate(AllPokemonsFragmentDirections.actionNavigationPokemonsAllToNavigationPokemonDetails())
     }
 
     private fun showPokemons(show:Boolean) {
@@ -94,23 +93,19 @@ class AllPokemonsFragment : Fragment() {
     }
     override fun onResume() {
         super.onResume()
-
         if (requireActivity() is MainActivity) {
             (activity as MainActivity?)!!.showBottomNavigationView()
         }
     }
-
-    /*
-    private fun searchPokemon() {
-        edit_text_search.addTextChangedListener(object: TextWatcher {
+    private fun setSearchPokemon() {
+        mBinding.etMainSearch.addTextChangedListener(object: TextWatcher {
             override fun afterTextChanged(s: Editable?) { }
-
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                viewModel.getSpecificPokemon(edit_text_search.text.toString())
+                mPokemonViewModel.getPokemonByNameOrId(mBinding.etMainSearch.text.toString())
+                    ?.let { mPokemonAdapter.addPokemons(it) }
             }
         })
     }
-    */
 }

@@ -29,8 +29,5 @@
         android:name="com.example.pokedex_kotlin.view.fragments.PokemonDetailsFragment"
         android:label="@string/title_pokemon_details"
         tools:layout="@layout/fragment_pokemon_details">
-        <argument
-            android:name="pokemonsDetails"
-            app:argType="com.example.pokedex_kotlin.model.entities.Pokemon" />
     </fragment>
 </navigation>
