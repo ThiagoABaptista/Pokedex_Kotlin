@@ -1,7 +1,6 @@
 package com.example.pokedex_kotlin.model.database
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.pokedex_kotlin.model.entities.Pokemon
@@ -18,8 +17,4 @@ interface PokemonDao {
 
     @Query("SELECT * FROM POKEMONS_TABLE WHERE catched_pokemon = 1")
     fun getCatchedPokemonList() : Flow<List<Pokemon>>
-
-    @Delete
-    fun deletePokemonDetails(pokemon: Pokemon)
-
 }

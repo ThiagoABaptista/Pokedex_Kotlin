@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.pokedex_kotlin.application.PokemonApplication
 import com.example.pokedex_kotlin.databinding.FragmentAllBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.network.PokemonRepository
@@ -28,8 +27,7 @@ class AllPokemonsFragment : Fragment() {
     private lateinit var mPokemonAdapter: PokemonAdapter
 
     private val mPokemonViewModel: PokemonViewModel by activityViewModels(){
-        PokemonViewModelFactory(this,
-            (requireActivity().application as PokemonApplication).repository)
+        PokemonViewModelFactory(this, PokemonRepository())
     }
 
     override fun onCreateView(
