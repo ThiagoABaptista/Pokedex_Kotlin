@@ -14,7 +14,17 @@
             android:id="@+id/action_navigation_pokemons_all_to_navigation_pokemon_details"
             app:destination="@id/navigation_pokemon_details" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_pokemon_random"
+        android:name="com.example.pokedex_kotlin.view.fragments.RandomFragment"
+        android:label="@string/title_pokemons_random"
+        tools:layout="@layout/fragment_random"
+        >
 
+        <action
+            android:id="@+id/action_navigation_pokemon_random_to_navigation_pokemon_details"
+            app:destination="@id/navigation_pokemon_details" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_pokemons_favorites"
         android:name="com.example.pokedex_kotlin.view.fragments.FavoritesFragment"

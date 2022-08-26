@@ -5,10 +5,9 @@
         android:icon="@drawable/ic_icon_pokeball"
         android:title="@string/title_all_pokemons"
         />
-
     <item
-        android:id="@+id/navigation_pokemons_favorites"
-        android:icon="@drawable/ic_icon_pokedex_bag"
-        android:title="@string/title_pokemons_favorite" />
+        android:id="@+id/navigation_pokemon_random"
+        android:icon="@drawable/ic_icon_question_mark"
+        android:title="@string/title_pokemons_random" />
 
 </menu>
