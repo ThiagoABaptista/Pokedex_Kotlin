@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
-        setupNavController()
+        //setupNavController()
     }
-    private fun setupNavController(){
+   /*private fun setupNavController(){
         val navView: BottomNavigationView = binding.navView
         //val navView: NavHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         binding.navView.clearAnimation()
         binding.navView.animate().translationY(0f).duration = 300
         binding.navView.visibility = View.VISIBLE
-    }
+    }*/
     override fun onSupportNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, null)
     }
