@@ -81,7 +81,7 @@ class AllPokemonsFragment : Fragment() {
     }
     fun pokemonDetails(pokemon: Pokemon){
         if (requireActivity() is MainActivity) {
-            (activity as MainActivity?)!!.hideBottomNavigationView()
+            //(activity as MainActivity?)!!.hideBottomNavigationView()
         }
         mPokemonViewModel.select(pokemon)
         findNavController()
@@ -94,7 +94,7 @@ class AllPokemonsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         if (requireActivity() is MainActivity) {
-            (activity as MainActivity?)!!.showBottomNavigationView()
+            //(activity as MainActivity?)!!.showBottomNavigationView()
         }
     }
     private fun setSearchPokemon() {
