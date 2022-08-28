@@ -3,6 +3,7 @@ package com.example.pokedex_kotlin.view.fragments
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,7 @@ import com.example.pokedex_kotlin.databinding.FragmentAllBinding
 import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.network.PokemonRepository
 import com.example.pokedex_kotlin.view.activities.MainActivity
-import com.example.pokedex_kotlin.view.adapters.AllPokemonAdapter
+import com.example.pokedex_kotlin.view.adapters.PokemonAdapter
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModel
 import com.example.pokedex_kotlin.viewmodel.PokemonViewModelFactory
 import com.example.pokedexagoravai.extension.setVisible
@@ -23,7 +24,7 @@ class AllPokemonsFragment : Fragment() {
 
     private lateinit var mBinding: FragmentAllBinding
 
-    private lateinit var mPokemonAdapter: AllPokemonAdapter
+    private lateinit var mPokemonAdapter: PokemonAdapter
 
     private val mPokemonViewModel: PokemonViewModel by activityViewModels(){
         PokemonViewModelFactory(this, PokemonRepository())
@@ -42,7 +43,7 @@ class AllPokemonsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mBinding.etMainSearch.setText("")
-        mPokemonAdapter = AllPokemonAdapter(this@AllPokemonsFragment)
+        mPokemonAdapter = PokemonAdapter(this@AllPokemonsFragment)
         registerObservers()
         configAdapter()
         mPokemonViewModel.getPokemons()

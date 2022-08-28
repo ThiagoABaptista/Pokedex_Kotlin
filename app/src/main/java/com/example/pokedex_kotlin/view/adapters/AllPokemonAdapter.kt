@@ -11,7 +11,7 @@ import com.example.pokedex_kotlin.model.entities.Pokemon
 import com.example.pokedex_kotlin.utils.SetPokemonColors
 import com.example.pokedex_kotlin.view.fragments.AllPokemonsFragment
 
-class AllPokemonAdapter(
+class PokemonAdapter(
     private val fragment : Fragment
 ) : RecyclerView.Adapter<PokemonViewHolder>() {
 

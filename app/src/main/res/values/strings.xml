@@ -15,7 +15,4 @@
     <string name="label_xDescription">Pokemon Description</string>
     <string name="pokemon_icon_description">Pokemon Icon</string>
     <string name="search_pokemon">Search Pokemon</string>
-    <string name="title_pokemons_random">Who\'s that pokemon?</string>
-    <string name="random_answer">Answer</string>
-    <string name="btn_random_answer">Answer</string>
 </resources>

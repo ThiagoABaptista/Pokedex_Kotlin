@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_pokemons_all,
-                R.id.navigation_pokemon_random
+                R.id.navigation_pokemons_favorites
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
