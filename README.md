@@ -6,7 +6,6 @@
  
  The user can then click on any pokemon and will open a sreen with the details of that pokemon.
  
- Also, the user can favorite a pokemon and then view a list of all their favorite pokemon's.
  
  To build it, i will use MVVM and retrofit to consult pokemons a raw JSON.
 
